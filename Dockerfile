@@ -25,6 +25,7 @@ RUN npm install hubot-hipchat --save && npm install
 RUN npm install hubot-google-translate --save && npm install
 ADD hubot/hubot-scripts.json /hubot/
 ADD hubot/external-scripts.json /hubot/
+ADD hubot/scripts/* /hubot/scripts/
 
 # run hubot
 CMD ["bin/hubot --adapter hipchat"]
