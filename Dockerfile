@@ -19,8 +19,9 @@ WORKDIR /hubot
 RUN yes | yo hubot --owner="hubot_user" --name="Test" --description="Test" --defaults
 
 # add scripts
-RUN npm install hubot-auth --save && npm install
 RUN npm install hubot-alias --save && npm install
+RUN npm install hubot-auth --save && npm install
+RUN npm install hubot-aws --save && npm install
 RUN npm install hubot-hipchat --save && npm install
 RUN npm install hubot-google-translate --save && npm install
 ADD hubot/hubot-scripts.json /hubot/
